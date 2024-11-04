@@ -20,7 +20,7 @@ public class LinearEquationLogic {
         anotherPair();
         while (yOrN.equals("y")) {
             getCoordinates();
-            anotherPair();        System.out.println();
+            anotherPair();
             System.out.println();
         }
         System.out.println("Goodbye! Thanks for using this slope calculator.");
@@ -55,12 +55,11 @@ public class LinearEquationLogic {
             System.out.println(equation.lineInfo());
             getXValue();
         } else {
-            System.out.println();
+            System.out.println("You cannot enter two points with the same x value.\n");
         }
     }
 
     public void getXValue() {
-
         System.out.print("Enter a value for x: ");
         double xNum = myScanner.nextDouble();
         System.out.println(equation.coordinateForX(xNum));

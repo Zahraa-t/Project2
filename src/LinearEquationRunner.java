@@ -5,5 +5,6 @@ public class LinearEquationRunner {
         LinearEquationLogic equation = new LinearEquationLogic();
         equation.start();
 
+
     }
 }
