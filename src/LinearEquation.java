@@ -17,7 +17,7 @@ public class LinearEquation {
     }
 
     public double yIntercept() {
-        double yInt = y1 - slope() * x1;
+        double yInt = y1 - (slope() * x1);
         return roundedToHundredth(yInt);
     }
 
@@ -33,7 +33,7 @@ public class LinearEquation {
             if (yIntercept() > 0) {
                 return "y = " + mSlope + "x + " + yIntercept();
             } else {
-                return "y = " + mSlope + "x " + yIntercept();
+                return "y = " + mSlope + "x - " + Math.abs(yIntercept());
             }
         } else {
             return " y = " + yIntercept();
@@ -43,12 +43,12 @@ public class LinearEquation {
     public String lineInfo() {
         String coord1 = "(" + x1 + ", " + y1 + ")";
         String coord2 = "(" + x2 + ", " + y2 + ")";
-        return "The two points are: " + coord1 + " and " + coord2 + "\nThe equation of the line between these points is:  " + equation() + "\nThe y-intercept of the line is: " + yIntercept() + "\nThe slope of this line is: " + slope() + "\nThe distance between the two points is : " + distance();
+        return "The two points are: " + coord1 + " and " + coord2 + "\nThe equation of the line between these points is:  " + equation() + "\nThe y-intercept of the line is: " + yIntercept() + "\nThe slope of this line is: " + slope() + "\nThe distance between the two points is : " + distance() + "\n";
     }
 
     public String coordinateForX(double xEntered) {
         double newYCoordinate = slope() * xEntered + yIntercept();
-        return "(" + xEntered + ", " + newYCoordinate + ")";
+        return "The point on the line is (" + xEntered + ", " + newYCoordinate + ")\n";
     }
 
     public double roundedToHundredth(double num) {
